@@ -1,3 +1,10 @@
+br\com\fema\academicofx\vo\AbstractVO.class
 br\edu\fema\academicofx\Main.class
+br\com\fema\academicofx\vo\TitulacaoAcademica.class
+br\com\fema\academicofx\vo\DisciplinaVO.class
+br\com\fema\academicofx\vo\ProfessorVO.class
+br\com\fema\academicofx\vo\CursoVO.class
 br\edu\fema\academicofx\MainViewController$1.class
+br\com\fema\academicofx\vo\AlunoVO.class
 br\edu\fema\academicofx\MainViewController.class
+br\com\fema\academicofx\framework\db\DBConnectionFactory.class

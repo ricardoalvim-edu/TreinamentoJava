@@ -17,7 +17,21 @@ public class DisciplinaVO extends AbstractVO{
 			Boolean fgPossuiProvas, 
 			Boolean fgPossuiSeminarios, 
 			Boolean fgPossuiTrabalhosExtras){
-		this.setId(id);
+		this.id = id;
+		this.descricao = descricao;
+		this.quantidadeAulasSemanais = quantidadeAulasSemanais;
+		this.fgPossuiProvas = fgPossuiProvas;
+		this.fgPossuiSeminarios = fgPossuiSeminarios;
+		this.fgPossuiTrabalhosExtras = fgPossuiTrabalhosExtras;
+	}
+	
+	public DisciplinaVO( 
+			String descricao, 
+			Long quantidadeAulasSemanais, 
+			Boolean fgPossuiProvas, 
+			Boolean fgPossuiSeminarios, 
+			Boolean fgPossuiTrabalhosExtras){
+		this.id =  this.generateGUID();
 		this.descricao = descricao;
 		this.quantidadeAulasSemanais = quantidadeAulasSemanais;
 		this.fgPossuiProvas = fgPossuiProvas;

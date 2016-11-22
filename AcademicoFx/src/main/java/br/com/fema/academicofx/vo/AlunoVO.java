@@ -1,8 +1,16 @@
 package br.com.fema.academicofx.vo;
-
 import java.util.Date;
 
+/*	PROJETO ACADÊMICO
+ * 
+ * 	TREINAMENTO JAVA
+ * 
+ * 	FUNDAÇÃO EDUCACIONAL DO MUNICÍPIO DE ASSIS
+ * 
+ *  VO do Aluno para mapeamento c/ Banco herdando o AbstractVO para geração do PK
+ */
 public class AlunoVO extends AbstractVO{
+	//Atributos
 	private String ra;
 	private String nome;	
 	private String sexo;
@@ -11,12 +19,26 @@ public class AlunoVO extends AbstractVO{
 	private Boolean fgAtivo;
 	private CursoVO curso;
 		
+	//construtor padrão
 	public AlunoVO(){
 		super();
 	}
 	
+	//construtor que recebe o id via parametro
 	public AlunoVO(Long id, String ra, String nome, String sexo, Date dataNascimento, String email, Boolean fgAtivo, CursoVO curso){
-		this.setId(id);
+		this.id = id;
+		this.ra = ra;
+		this.nome = nome;
+		this.sexo = sexo;
+		this.dataNascimento = dataNascimento;
+		this.email = email;
+		this.fgAtivo = fgAtivo;
+		this.curso = curso;
+	}
+	
+	//construtor que gera o id
+	public AlunoVO(String ra, String nome, String sexo, Date dataNascimento, String email, Boolean fgAtivo, CursoVO curso){
+		this.id = this.generateGUID();
 		this.ra = ra;
 		this.nome = nome;
 		this.sexo = sexo;
@@ -26,6 +48,7 @@ public class AlunoVO extends AbstractVO{
 		this.curso = curso;
 	}
 
+	//getters e setters
 	public String getRa() {
 		return ra;
 	}

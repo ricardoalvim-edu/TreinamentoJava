@@ -14,7 +14,15 @@ public class CursoVO extends AbstractVO{
 	}
 	
 	public CursoVO(Long id, String codigo, String descricao, String sigla, int quantidadeAnos){
-		this.setId(id);
+		this.id = id;
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.sigla = sigla;
+		this.quantidadeAnos = quantidadeAnos;
+	}
+	
+	public CursoVO(String codigo, String descricao, String sigla, int quantidadeAnos){
+		this.id = this.generateGUID();
 		this.codigo = codigo;
 		this.descricao = descricao;
 		this.sigla = sigla;

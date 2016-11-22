@@ -26,7 +26,27 @@ public class ProfessorVO extends AbstractVO{
 			BigDecimal valorSalario,
 			TitulacaoAcademica titulacao,
 			CursoVO curso){
-		this.setId(id);
+		this.id = id;
+		this.matricula = matricula;
+		this.nome = nome;
+		this.sexo = sexo;
+		this.dataNascimento = dataNascimento;
+		this.dataMatricula = dataMatricula;
+		this.valorSalario = valorSalario;		
+		this.titulacao = titulacao;
+		this.curso = curso;
+	}
+	
+	public ProfessorVO(
+			String matricula, 
+			String nome, 
+			String sexo,
+			Date dateNascimento,
+			Date dateMatricula,
+			BigDecimal valorSalario,
+			TitulacaoAcademica titulacao,
+			CursoVO curso){
+		this.id = this.generateGUID();
 		this.matricula = matricula;
 		this.nome = nome;
 		this.sexo = sexo;
